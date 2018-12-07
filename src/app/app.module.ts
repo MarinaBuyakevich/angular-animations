@@ -8,14 +8,16 @@ import { BrowserModule } from '@angular/platform-browser';
   import { PageComponent } from './page/page.component';
   import {NoopAnimationsModule} from '@angular/platform-browser/animations';
   import {MatCheckboxModule} from '@angular/material';
-
-
+  import { ContentService } from './shared/services/content.service';
+  import { Injectable } from '@angular/core';
+import { FullpageDirective } from './shared/directives/fullpage.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageComponent
+    PageComponent,
+    FullpageDirective
   ],
   imports: [
     BrowserModule,
@@ -25,12 +27,15 @@ import { BrowserModule } from '@angular/platform-browser';
     MatButtonModule,
     MatCardModule,
     NoopAnimationsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    Injectable
   ],
   exports: [MatButtonModule, MatCheckboxModule],
-  providers: [],
+  providers: [ContentService],
   bootstrap: [AppComponent, PageComponent]
 })
+
+
 export class AppModule  { }
 // export class PizzaPartyAppModule { }
 // export class MyOwnCustomMaterialModule { }

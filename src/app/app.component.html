@@ -1,7 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h1>
-  {{title}}
-</h1>
-<button md-button> Click me! </button >
+<!--<h1>-->
+  <!--{{title}}-->
+<!--</h1>-->
+<!--<button md-button> Click me! </button >-->
+<!--<router-outlet></router-outlet>-->
+<!--<app-page></app-page>-->
+
 <router-outlet></router-outlet>
-<app-page></app-page>
+<md-toolbar color="primary">
+  <h1><span class="light">SUPER</span>LOGO</h1>
+  <span class="spacer"></span>
+  <a md-button
+     [routerLink]="['home']"
+     routerLinkActive="active">HOME</a>
+  <a md-button
+     [routerLink]="['about']"
+     routerLinkActive="active">ABOUT</a>
+  <a md-button
+     [routerLink]="['contact']"
+     routerLinkActive="active">CONTACT</a>
+</md-toolbar>
